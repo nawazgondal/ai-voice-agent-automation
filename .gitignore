@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+google-service-account.json
+frontend/node_modules/
+*.log

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>AI Voice Agent</h1>
+
+  <form (ngSubmit)="submitCall()">
+    <label>Lead name</label>
+    <input type="text" [(ngModel)]="leadName" name="leadName" />
+
+    <label>Company</label>
+    <input type="text" [(ngModel)]="company" name="company" />
+
+    <label>Phone number</label>
+    <input type="text" [(ngModel)]="phone" name="phone" placeholder="+15551234567" />
+
+    <label>Notes</label>
+    <textarea [(ngModel)]="notes" name="notes"></textarea>
+
+    <button type="button" (click)="submitCall()" [disabled]="loading">Start Call</button>
+  </form>
+
+  <div class="status" *ngIf="status">
+    {{ status }}
+  </div>
+</div>
